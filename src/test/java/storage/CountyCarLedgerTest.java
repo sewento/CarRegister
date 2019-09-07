@@ -1,7 +1,10 @@
 package storage;
 
 import model.Car;
+
+
 import model.County;
+
 import model.NormalCar;
 import org.junit.jupiter.api.Test;
 
@@ -11,13 +14,19 @@ class CountyCarLedgerTest {
 
     @Test
     void addCarToMap_givenOneCar_shouldHaveOneObjectInMap (){
+       
+
         Car car = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.MALOPOLSKIE);
+
         CountyCarLedger ledger = new MapCountyCarLedger();
         addCheckTest(ledger, car);
     }
     @Test
     void addCarToList_givenOneCar_shouldHaveOneObjectInList (){
+
+
         Car car = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.MALOPOLSKIE);
+
         CountyCarLedger ledger = new ListCountyCarLedger();
         addCheckTest(ledger, car);
 
@@ -27,6 +36,7 @@ class CountyCarLedgerTest {
         countyCarLedger.addCar(car);
         assertEquals(1, countyCarLedger.findAllCars().size());
     }
+
 
     @Test
     void removeCarMap_givenTwoCars_shouldRemoveOne(){
@@ -49,6 +59,7 @@ class CountyCarLedgerTest {
         assertEquals(1,countyCarLedger.findAllCars().size());
         assertTrue(countyCarLedger.findAllCars().contains(car2));
     }
+
 
 }
 
