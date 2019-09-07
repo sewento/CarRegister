@@ -2,6 +2,7 @@ package storage;
 
 import model.Car;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +18,11 @@ public class ListCountyCarLedger implements CountyCarLedger {
     @Override
     public void removeCar(Car car) {
         cars.remove(car);
-
     }
 
     @Override
     public List<Car> findAllCars() {
+
         return cars;
     }
-
-
 }
