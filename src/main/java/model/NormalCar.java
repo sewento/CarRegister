@@ -1,6 +1,17 @@
 package model;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class NormalCar implements Car {
+
+    String name;
+    Double engine;
+    Double acceleration;
+    Double weight;
+    County county;
 
     @Override
     public String getName() {
