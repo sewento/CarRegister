@@ -1,8 +1,11 @@
 package model;
 
-public class Car {
-    String model;
-    int yearOfProduction;
-    double weight;
+public interface Car {
+    String getName();
+    Double getEngine();
+
+    Double getAcceleration();
+    Double getWeight();
+    County getCounty();
 
 }
