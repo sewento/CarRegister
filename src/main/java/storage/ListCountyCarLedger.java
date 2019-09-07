@@ -1,10 +1,15 @@
 package storage;
 
 import model.Car;
+import model.County;
+
 
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ListCountyCarLedger implements CountyCarLedger {
 
@@ -22,6 +27,11 @@ public class ListCountyCarLedger implements CountyCarLedger {
 
     @Override
     public List<Car> findAllCars() {
+
+        List<Car> car = cars
+                .stream()
+                .sorted(Comparator.comparing(Car::getCounty))
+                .collect(Collectors.toList());
 
         return cars;
     }
