@@ -28,10 +28,10 @@ public class ListCountyCarLedger implements CountyCarLedger {
     @Override
     public List<Car> findAllCars() {
 
-        List<Car> car = cars
-                .stream()
-                .sorted(Comparator.comparing(Car::getCounty))
-                .collect(Collectors.toList());
+//        List<Car> car = cars
+//                .stream()
+//                .sorted(Comparator.comparing(Car::getCounty).reversed())
+//                .collect(Collectors.toList());
 
         return cars;
     }

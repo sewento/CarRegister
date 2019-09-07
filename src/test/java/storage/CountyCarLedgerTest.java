@@ -60,7 +60,20 @@ class CountyCarLedgerTest {
         assertTrue(countyCarLedger.findAllCars().contains(car2));
     }
 
-
+//    @Test
+//    void findAllCarsList_givenDifferentCounty_shouldSortInCorrectOrder(){
+//        Car car1 = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.MALOPOLSKIE);
+//        Car car2 = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.SLASKIE);
+//        Car car3 = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.MALOPOLSKIE);
+//        Car car4 = new NormalCar("Ford", 1.6, 100.0, 2000.0, County.SLASKIE);
+//        CountyCarLedger ledger = new ListCountyCarLedger();
+//        ledger.addCar(car1);
+//        ledger.addCar(car2);
+//        ledger.addCar(car3);
+//        ledger.addCar(car4);
+//        assertEquals(County.MALOPOLSKIE, ledger.findAllCars().get(1).getCounty());
+//
+//    }
 }
 
 
