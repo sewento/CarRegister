@@ -1,6 +1,6 @@
 package model;
 
-public interface Car {
+public interface Car extends Comparable{
     String getName();
     Double getEngine();
 
