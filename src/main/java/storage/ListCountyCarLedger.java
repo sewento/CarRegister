@@ -4,6 +4,7 @@ import model.Car;
 import model.County;
 
 
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -26,10 +27,12 @@ public class ListCountyCarLedger implements CountyCarLedger {
 
     @Override
     public List<Car> findAllCars() {
+
         List<Car> car = cars
                 .stream()
                 .sorted(Comparator.comparing(Car::getCounty))
                 .collect(Collectors.toList());
+
         return cars;
     }
 }
