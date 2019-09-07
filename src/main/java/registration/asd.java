@@ -1,4 +1,4 @@
-package Registration;
+package registration;
 
 public class asd {
 }
