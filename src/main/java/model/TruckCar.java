@@ -3,9 +3,11 @@ package model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+import java.util.Comparator;
+
 @Data
 @AllArgsConstructor
-public class TruckCar implements Car {
+public class TruckCar implements Car{
 
     String name;
     Double engine;
@@ -15,26 +17,37 @@ public class TruckCar implements Car {
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override
     public Double getEngine() {
-        return null;
+        return engine;
     }
 
     @Override
     public Double getAcceleration() {
-        return null;
+        return acceleration;
     }
 
     @Override
     public Double getWeight() {
-        return null;
+        return weight;
     }
 
     @Override
     public County getCounty() {
-        return null;
+        return county;
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        TruckCar car = (TruckCar) o;
+        return Comparator.comparing(o1 -> car.getName())
+                .thenComparing(o1 -> car.getAcceleration())
+                .thenComparing(o1 -> car.getEngine())
+                .thenComparing(o1 -> car.getWeight())
+                .thenComparing(o1 -> car.getCounty())
+                .compare(this, car);
     }
 }
