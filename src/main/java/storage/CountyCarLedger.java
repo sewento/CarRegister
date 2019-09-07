@@ -1,4 +1,6 @@
-package model;
+package storage;
+
+import model.Car;
 
 import java.util.List;
 

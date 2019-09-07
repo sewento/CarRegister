@@ -1,6 +1,7 @@
 package model;
 
 public class NormalCar implements Car {
+
     @Override
     public String getName() {
         return null;
